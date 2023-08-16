@@ -1,0 +1,273 @@
+$body-color: black;
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+//Mobile styles
+
+
+.controllerContainer,
+.inputWrapper,
+.resultContainer,
+.allUniversitiesBox,
+.allUniversitiesBox>ul,
+.shortSummeryContainer,
+.shortSummeryContainer>ul,
+.countryListWrapper,
+.aboutWrapper,
+.aboutWrapper>div {
+    border-radius: 5px;
+    border: solid #DCDCDC 1px;
+    background-color: white;
+}
+
+//Colors: https://www.w3schools.com/cssref/css_colors.php
+body {
+    background-color: #FFF8DC;
+}
+
+.app {
+    width: 90%;
+    margin: 20px auto;
+    border: solid 1px transparent;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(98, 96, 96, 0.1);
+    overflow: hidden;
+
+    .hightSchool {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .NavigationPanel {
+        text-align: center;
+        border-box: content-box;
+        margin-bottom: 20px;
+
+        a {
+            text-decoration: none;
+            margin: 0 5px;
+            padding: 0;
+        }
+    }
+
+    .titleContainer {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    //Controller styles
+    .controllerContainer {
+        height: 400px;
+        margin: 20px;
+        border-box: content-box;
+        padding: 10px;
+
+        h3,
+        input,
+        .countryListWrapper {
+            padding: 10px 0;
+        }
+
+        ::value {
+            padding-left: 20px;
+        }
+
+        input {
+            width: calc(100% - 24px);
+            margin-left: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .countryListWrapper {
+            height: 250px;
+            overflow: auto;
+
+            li {
+                padding: 5px;
+                padding-left: 10px;
+            }
+
+            li:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    //Country summery styles
+    .shortSummeryContainer {
+        margin: 10px 20px;
+        border-box: content-box;
+        padding: 10px;
+
+        .detailsOfCountry {
+            border-box: content-box;
+            padding: 10px;
+        }
+
+        .flagPic,
+        h3,
+        ul {
+            margin: 10px 0;
+        }
+
+        .flagPic {
+            width: 100%;
+        }
+    }
+
+    //University list styles
+    .resultContainer {
+        border-box: content-box;
+        padding: 10px;
+        margin: 10px 20px;
+
+
+        .allUniversitiesBox {
+
+            margin-top: 10px;
+
+            .notFoundUni {
+                padding: 5px;
+            }
+
+            ul {
+                margin: 10px;
+                border-box: content-box;
+                padding: 5px;
+
+                li {
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+
+    //About App Page style
+
+    .aboutBlock {
+        margin-bottom: 20px;
+    }
+
+    .aboutWrapper {
+        margin: 10px;
+        border-box: content-box;
+        padding: 10px;
+
+        .appDescription,
+        .instructionBlock,
+        .appResourses,
+        .appTech,
+        .madeBY {
+            border-box: content-box;
+            padding: 10px;
+            margin: 5px 0;
+
+            h3,
+            p,
+            li {
+                margin: 5px 0;
+            }
+        }
+
+        .appResourses,
+        .appTech,
+        .madeBY,
+        .appDescription > h3,
+        .instructionBlock > h3 {
+            text-align: center;
+            border: solid 1px transparent;
+        }
+
+        .instructionBlock {
+            .attentionWord {
+                font-weight: 600;
+            }
+        }
+
+        .devName {
+            font-weight: bold;
+        }
+    }
+}
+
+
+//Desktop styles
+
+@media (min-width: 400px) {
+
+    .app {
+
+        .controllerContainer {
+            float: left;
+            width: 35%;
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .shortSummeryContainer {
+            float: right;
+            width: calc(100% - (35% + 80px));
+            margin: 0;
+            margin-right: 10px;
+
+            .flagPic {
+                width: 80%;
+            }
+        }
+
+        .resultContainer {
+            float: right;
+            margin: 0;
+            margin-right: 10px;
+            margin-top: 10px;
+            width: calc(100% - (35% + 80px));
+        }
+
+        .clearFloat {
+            height: 20px;
+            clear: both;
+        }
+
+        .aboutWrapper {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+}
+
+//Desktop style
+
+@media (min-width: 1000px) {
+    .app {
+        width: 1000px;
+
+        .shortSummeryContainer {
+
+            .flagPic {
+                width: 400px;
+            }
+        }
+
+        .aboutWrapper {
+            width: 700px;
+            margin: 0 auto;
+        }
+    }
+}
